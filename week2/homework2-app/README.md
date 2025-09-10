@@ -4,6 +4,8 @@ This project is the second homework for N322.
 
 It is a basic React Native app built with Expo that contains an about me.
 
+![picture of app](https://i.vgy.me/NahHf8.png)
+
 ## Getting Started
 
 Follow these steps to run the app after downloading the N322 repository:
