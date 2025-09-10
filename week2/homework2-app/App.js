@@ -20,10 +20,10 @@ export default function App() {
 					<Text style={[styles.baseText, styles.headerS]}>Recently found out about Board Games</Text>
 				</View>
 				<View style={styles.card}>
-					<Text style={[styles.baseText, styles.headerS]}>Like's to cook</Text>
+					<Text style={[styles.baseText, styles.headerS]}>Likes to cook</Text>
 				</View>
 				<View style={styles.card}>
-					<Text style={[styles.baseText, styles.headerS]}>Love's to travel</Text>
+					<Text style={[styles.baseText, styles.headerS]}>Loves to travel</Text>
 				</View>
 				<View style={styles.card}>
 					<Text style={[styles.baseText, styles.headerS]}>Dog Person</Text>
