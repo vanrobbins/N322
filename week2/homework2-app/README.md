@@ -17,10 +17,10 @@ Install Expo go on phone of choice
 
 ### 2. Install Dependencies
 
-Navigate to the `homework-app` directory in the downloaded repo N322:
+Navigate to the `homework2-app` directory in the downloaded N322 repo:
 
 ```
-cd ../N322/week2/homework-app
+cd ../N322/week2/homework2-app
 ```
 
 Install the required packages:
