@@ -38,7 +38,7 @@ export default function App() {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: "#85cccfff",
+		backgroundColor: "#72b6ffff",
 		alignItems: "center",
 		justifyContent: "center",
 		width: "100%",
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
 		padding: 20,
 		maxWidth: "85%",
 		flexDirection: "column",
-		backgroundColor: "#222",
+		backgroundColor: "#407bbbff",
 		alignItems: "center",
 		borderRadius: 20,
 		shadowColor: "#111",
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
 		borderRadius: 20,
 	},
 	baseText: {
-		color: "#ddd",
+		color: "#eee",
 		fontSize: 16,
 		marginTop: 4,
 		flexShrink: 1,
