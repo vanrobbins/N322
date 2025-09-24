@@ -2,6 +2,8 @@
 
 This project is a modern student learning hub built with React Native and Expo, featuring tab navigation, resource management, authentication, and a consistent design system.
 
+<div style="display: flex; justify-Content: space-around;"><img src="images/IMG_5162.PNG" alt="Home Page" style="width:25%;"> <img src="images/IMG_5160.PNG" alt="Resource Page" style="width:25%;"> <img src="images/IMG_5161.PNG" alt="Profile Page" style="width:25%;"></div>
+
 ## Features
 
 - **React Navigation**: Tab navigator with nested stack navigators for complex routing
@@ -107,7 +109,7 @@ student-hub/
 
 - **React Native**: Cross-platform mobile development framework
 - **Expo**: Development platform and toolchain for React Native
-- **React Navigation v6**: Navigation library with tab and stack navigators
+- **React Navigation**: Navigation library with tab and stack navigators
 - **Expo Vector Icons**: Icon system using Ionicons
 - **JavaScript ES6+**: Modern JavaScript with hooks and async/await
 - **StyleSheet API**: React Native styling system
