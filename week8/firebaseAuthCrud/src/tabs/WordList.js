@@ -10,7 +10,6 @@ import {
 	onSnapshot,
 	query,
 	where,
-	orderBy,
 	updateDoc,
 	deleteDoc,
 	doc,
@@ -22,11 +21,22 @@ export default function WordsList() {
 	const [word, setWord] = useState("");
 	const [editingId, setEditingId] = useState(null);
 	const [items, setItems] = useState([]);
+	const [error, setError] = useState(null);
 
 	useEffect(() => {
 		if (!user) return;
-		const q = query(collection(db, "words"), where("ownerId", "==", user.uid), orderBy("createdAt", "desc"));
-		const unsub = onSnapshot(q, (snap) => setItems(snap.docs.map((d) => ({ id: d.id, ...d.data() }))));
+		const q = query(collection(db, "words"), where("ownerId", "==", user.uid));
+		const unsub = onSnapshot(
+			q,
+			(snap) => {
+				setError(null);
+				const sorted = snap.docs
+					.map((d) => ({ id: d.id, ...d.data() }))
+					.sort((a, b) => (b.createdAt?.toMillis?.() ?? 0) - (a.createdAt?.toMillis?.() ?? 0));
+				setItems(sorted);
+			},
+			(err) => setError(err.message || "Failed to load words")
+		);
 		return unsub;
 	}, [user?.uid]);
 
@@ -61,6 +71,7 @@ export default function WordsList() {
 	return (
 		<View style={s.container}>
 			<Text style={s.title}>Your Words</Text>
+			{error ? <Text style={s.error}>Error loading words: {error}</Text> : null}
 			<View style={s.row}>
 				<TextInput
 					style={[s.input, { flex: 1 }]}
@@ -115,4 +126,5 @@ const s = StyleSheet.create({
 	word: { fontSize: 18, fontWeight: "600" },
 	cardButtons: { flexDirection: "row", alignItems: "center" },
 	link: { fontSize: 16, color: "#06c" },
+	error: { color: "#c00", marginBottom: 8 },
 });
