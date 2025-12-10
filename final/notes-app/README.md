@@ -30,6 +30,10 @@ A modern, feature-rich notes application built with React Native, Expo Router, a
 - Android support
 - Web support
 
+## Live Demo
+
+Try the app at: https://notes-app-nu-opal.vercel.app/sign-in
+
 ## Tech Stack
 
 - **React Native** - Mobile framework
@@ -54,7 +58,7 @@ Before you begin, ensure you have the following installed:
 
 ```bash
 git clone https://github.com/vanrobbins/N322
-cd notes-app
+cd final/notes-app
 ```
 
 ### 2. Install Dependencies
